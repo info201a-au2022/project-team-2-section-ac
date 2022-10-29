@@ -47,4 +47,28 @@ Link to Dataset: [International Football Results from 1872 to 2022]: https://www
 We found this data set through kaggle. The data was collected from several sources including Wikipedia, individual football associations’ websites, and rsssf.com (Rec Sport Soccer Statistics). The data was collected and published by Mart Jurisoo (a data scientist) and posted on Kaggle. His purpose for creating this data set was to make an easy to read list of international football matches so he could analyze team performances easily. The data set does not seem to have any monetary connection to it as most of the information collected is accessible by the public. We have no way to validate the results- unless wse individually fact check each match in the data set- as it was a private citizen who collected this data as a hobby but the data is updated regularly to give us accurate information.
 
 ## **Expected Implications**
-By answering our research question, our analysis could provide sponsors with information about teams they potentially want to sponsor- as they typically want to be represented by a team that performs well. Additionally, this information could provide information for team management, such as how much money they should commit into their program based on the results they see, as well as determine if there needs to be a change to team management structure if they do not see the results they want in our data. Overall the answers provided by our research question can lead to very important monetary decisions when it comes to these national teams. A more laid back implication would be that the answer to our research question could provide everyday fans with context and stats for their favorite teams, especially if they want to put money down on a game. 
+By answering our research question, our analysis could provide sponsors with information about teams they potentially want to sponsor- as they typically want to be represented by a team that performs well. Additionally, this information could provide information for team management, such as how much money they should commit into their program based on the results they see, as well as determine if there needs to be a change to team management structure if they do not see the results they want in our data. Overall the answers provided by our research question can lead to very important monetary decisions when it comes to these national teams. A more laid back implication would be that the answer to our research question could provide everyday fans with context and stats for their favorite teams, especially if they want to put money down on a game.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Acknowledgement**
+
+## **References**
+- Jürisoo, Mart. International Football Results from 1872 to 2022. Kaggle. Web. https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017/discussion?resource=download
+
+## **Appendix A: Questions**
