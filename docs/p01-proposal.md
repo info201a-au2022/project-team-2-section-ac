@@ -3,7 +3,7 @@
 ### Code Name: Soccer Data
 
 ## **Authors:**
-Shira Zur (szur@uw.edu), Deeana Nasrulai (deeanan@uw.edu), Nathan Beh ()
+Shira Zur (szur@uw.edu), Deeana Nasrulai (deeanan@uw.edu), Nathan Beh (nbeh5@uw.edu)
 
 ## **Affilitation:**
  INFO-201: Technical Foundations of Informatics - The Information School -
@@ -20,6 +20,14 @@ Shira Zur (szur@uw.edu), Deeana Nasrulai (deeanan@uw.edu), Nathan Beh ()
 
 
 
+## **Abstract**
+Our main question asks what insights we can gather from extracting data from a record of International Women's Soccer Games (1872-2022). This question is important because it allows us to make predictions about the performance of different teams and whether factors like home vs away games influence the outcome of a game. To address this question, we will use data extraction and visualization techniques to organize, manipulate, and sort data.
+
+## **Keywords**
+_sports, women's soccer, game analytics, game prediction, team performance_
+
+## **Introduction**
+In this project, we pull data from the “International Football Results from 1872 to 2022” dataset, which provides information about different football teams’ performance over time, including which tournaments they played at, whether the game played was a home or away game, and the city / country the team is from. From this dataset, we hope to provide statistics to potential stakeholders like sports fans and team management about which teams are historically competitive, which teams perform better at home / away games, performance by tournament, and how two teams compare to each other (for more detail, see the Research Questions below). To answer our questions, we will use data manipulation techniques like DPLYR to filter, sort, and summarize data, as well as our domain knowledge in sports to aid our understanding of the data. We will also use different data visualizations (bars, charts, and graphs) to display information in a clear and visually engaging way.
 
 
 ## **Research Questions**
