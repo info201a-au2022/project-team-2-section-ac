@@ -41,9 +41,9 @@ One benefit of this data is that in general, according to an article by The Guar
 - *Harms:*
 A clear harm of this data is that it excluded women’s soccer. This data is even further harder to analyze due to a lack of collection, and this data set is continuing this pattern by excluding a whole gender of soccer games and teams.
 
-- [https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]
-- [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]
-- [https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]
+[https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]. 
+[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]. 
+[https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]. 
 
 ## **Research Questions**
 
