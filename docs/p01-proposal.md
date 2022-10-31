@@ -52,10 +52,8 @@ _sports, soccer, game analytics, game prediction, team performance_
 In this project, we pull data from the “International Football Results from 1872 to 2022” dataset, which provides information about different football teams’ performance over time, including which tournaments they played at, whether the game played was a home or away game, and the city / country the team is from. From this dataset, we hope to provide statistics to potential stakeholders like sports fans and team management about which teams are historically competitive, which teams perform better at home / away games, performance by tournament, and how two teams compare to each other (for more detail, see the Research Questions below). To answer our questions, we will use data manipulation techniques like DPLYR to filter, sort, and summarize data, as well as our domain knowledge in sports to aid our understanding of the data. We will also use different data visualizations (bars, charts, and graphs) to display information in a clear and visually engaging way.
 
 =======
-- *Citations:*
-[https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]
-[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]
-[https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]
+
+
 >>>>>>> 848a0f0503cc4d3ef607bc55952633720ab12fbc
 
 ## **Research Questions**
@@ -93,5 +91,8 @@ N/A
 
 ## **References**
 - Jürisoo, Mart. International Football Results from 1872 to 2022. Kaggle. Web. https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017/discussion?resource=download
+- [https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]
+- [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]
+- [https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]
 
 ## **Appendix A: Questions**
