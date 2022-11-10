@@ -49,6 +49,7 @@ str(WorldData) #to see the structure of the world data
 View(WorldData)
 WorldData[WorldData == "USA"] <- "United States"
 WorldData[WorldData == "China"] <- "China PR"
+WorldData[WorldData == "Democratic Republic of the Congo"] <- "DR Congo"
 Combined <- WorldData[mapData$team %in% mapData$team, ]
 Combined$value <- mapData$total_goals[match(Combined$region, mapData$team)]
 
