@@ -57,6 +57,7 @@ for(i in CDF) {
                            (mapData$total_goals), Combined$team) 
 }
 
+
 #map aesthetics code
 worldMap1 <- ggplot(Combined, aes(x=long, y= lat, group = group, fill = value)) +
   geom_polygon(color = 'white') +
