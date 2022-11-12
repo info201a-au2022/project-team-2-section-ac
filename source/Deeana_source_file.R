@@ -1,9 +1,5 @@
 #source code for density map 
 #question that graph acknowledges: Which National Teams has the most total wins from 1872-2022?
-install.packages('tidyverse')
-install.packages('dplyr')
-install.packages('ggmap')
-install.packages("ggplot2")
 library(ggmap)
 library(dplyr)
 library(tidyverse)
