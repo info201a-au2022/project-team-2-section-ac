@@ -43,7 +43,7 @@ mapData <- total_goals_by_team
 #world map set up code
 WorldData=map_data("world")  #to take the world data
 str(WorldData) #to see the structure of the world data
-View(WorldData)
+
 WorldData[WorldData == "USA"] <- "United States"
 WorldData[WorldData == "China"] <- "China PR"
 WorldData[WorldData == "Democratic Republic of the Congo"] <- "DR Congo"
