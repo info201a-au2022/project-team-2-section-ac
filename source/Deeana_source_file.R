@@ -3,14 +3,15 @@
 install.packages('tidyverse')
 install.packages('dplyr')
 install.packages('ggmap')
+install.packages("ggplot2")
 library(ggmap)
 library(dplyr)
 library(tidyverse)
+library(plotly)
 
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
-View(results_df)
-library(results_df)
+
 
 new_df <- data.frame(results_df$home_team, results_df$home_score, 
                     results_df$away_team, results_df$away_score)
@@ -41,7 +42,7 @@ total_goals_by_team <- df %>%
   mutate(total_goals = home.goals + away.goals)
 
 mapData <- total_goals_by_team
-View(mapData)
+
 
 #world map set up code
 WorldData=map_data("world")  #to take the world data
@@ -70,6 +71,8 @@ worldMap1 <- ggplot(Combined, aes(x=long, y= lat, group = group, fill = value)) 
   scale_y_continuous(breaks = c()) +
   scale_x_continuous(breaks = c()) +
   theme(panel.border = element_blank())
+
+
 #interactive element code
 ggplotly(worldMap1) %>%
   highlight(
