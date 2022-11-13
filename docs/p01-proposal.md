@@ -10,10 +10,10 @@ Shira Zur (szur@uw.edu), Deeana Nasrulai (deeanan@uw.edu), Nathan Beh (nbeh5@uw.
  University of Washington
 
 ## **Abstract**
-Our main question asks what insights we can gather from extracting data from a record of International Women's Soccer Games (1872-2022). This question is important because it allows us to make predictions about the performance of different teams and whether factors like home vs away games influence the outcome of a game. To address this question, we will use data extraction and visualization techniques to organize, manipulate, and sort data.
+Our main question asks what insights we can gather from extracting data from a record of International Soccer Games (1872-2022). This question is important because it allows us to make predictions about the performance of different teams and whether factors like home vs away games influence the outcome of a game. To address this question, we will use data extraction and visualization techniques to organize, manipulate, and sort data.
 
 ## **Keywords**
-_sports, women's soccer, game analytics, game prediction, team performance_
+_sports, soccer, game analytics, game prediction, team performance_
 
 ## **Introduction**
 In this project, we pull data from the “International Football Results from 1872 to 2022” dataset, which provides information about different football teams’ performance over time, including which tournaments they played at, whether the game played was a home or away game, and the city / country the team is from. From this dataset, we hope to provide statistics to potential stakeholders like sports fans and team management about which teams are historically competitive, which teams perform better at home / away games, performance by tournament, and how two teams compare to each other (for more detail, see the Research Questions below). To answer our questions, we will use data manipulation techniques like DPLYR to filter, sort, and summarize data, as well as our domain knowledge in sports to aid our understanding of the data. We will also use different data visualizations (bars, charts, and graphs) to display information in a clear and visually engaging way.
@@ -41,10 +41,9 @@ One benefit of this data is that in general, according to an article by The Guar
 - *Harms:*
 A clear harm of this data is that it excluded women’s soccer. This data is even further harder to analyze due to a lack of collection, and this data set is continuing this pattern by excluding a whole gender of soccer games and teams.
 
-- *Citations:*
-[https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]
-[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]
-[https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]
+[https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]. 
+[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]. 
+[https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]. 
 
 ## **Research Questions**
 
@@ -81,5 +80,8 @@ N/A
 
 ## **References**
 - Jürisoo, Mart. International Football Results from 1872 to 2022. Kaggle. Web. https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017/discussion?resource=download
+- [https://www.professionalfootballjournal.fifa.com/pfj2-7-football-stakeholders#:~:text=The%20professional%20football%20industry%20is,%2C%20clubs%2C%20leagues%20and%20players]
+- [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/]
+- [https://www.theguardian.com/football/blog/2022/oct/31/data-has-improved-our-understanding-of-football-but-it-remains-a-sport-of-luck]
 
 ## **Appendix A: Questions**
