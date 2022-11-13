@@ -15,7 +15,6 @@ This World Density Map shows the total number of goals scored by each country fr
 
 ```{r, echo = FALSE}
 source('/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/Deeana_source_file.R')
-library(knitr)
 plot(worldMap1)
 ```
 
@@ -26,10 +25,6 @@ This density visualization allows us to see a big picture overview of National t
 This table allows the reader to explore the raw data points we used in order to create the visuals displayed below. Having a table that displays this raw data is important because it allows the reader to not only use or analysis but be able to create their own conclusions because we provided them with as much information as possible and not only our visuals of the manipulated data.
 
 ```{r, echo = FALSE, results = 'asis'}
-library(dplyr)
-library(tidyverse)
-library(knitr)
-library(kableExtra)
 source('/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/table.sourcefile.R')
 total_goals_by_team %>%
   kbl() %>%
