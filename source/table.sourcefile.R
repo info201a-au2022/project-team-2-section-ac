@@ -31,12 +31,14 @@ total_goals_by_team <- df %>%
   rename(away.goals = score.y) %>% 
   mutate(total_goals = home.goals + away.goals)
 
+total_goals_by_team %>%
+  kbl() %>%
+  kable_styling() %>% 
 scroll_box(
-  kable(total_goals_by_team),
   height = "500px",
   width = "500px",
   box_css = "border: 1px solid #ddd; padding: 5px; ",
   extra_css = NULL,
   fixed_thead = TRUE
 )
-
+kable(total_goals_by_team)
