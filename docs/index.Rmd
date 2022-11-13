@@ -19,7 +19,7 @@ library(knitr)
 plot(worldMap1)
 ```
 
-This visualization allows us to see a big picture overview of National team performances from the start of data collection. This could provide analysis that could help national teams/players/supporters be informed on the status of their team's success. This also informs us which team has been the most dominant in the history of soccer.
+This density visualization allows us to see a big picture overview of National team performances from the start of data collection. This could provide analysis that could help national teams/players/supporters be informed on the status of their team's success. This also informs us which team has been the most dominant in the history of soccer.
 
 ## Summary Table
 
