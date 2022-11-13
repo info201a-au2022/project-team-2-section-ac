@@ -53,8 +53,13 @@ Combined$value <- mapData$total_goals[match(Combined$region, mapData$team)]
 Countries <- unique(Combined$region)
 CDF <- data.frame(label1=Countries)
 for(i in CDF) {
-  Combined$value <- ifelse(Combined$region %in% CDF$label1[i], 
-                           (mapData$total_goals), Combined$team) 
+  #Combined$value <- ifelse(Combined$region %in% CDF$label1[i], 
+                           #(mapData$total_goals), Combined$team) 
+  Combined$value <- if(Combined$region %in% CDF$label1[i]) {
+    print(mapData$total_goals)
+  } else {
+    print(Combined$team)
+  }
 }
 
 
