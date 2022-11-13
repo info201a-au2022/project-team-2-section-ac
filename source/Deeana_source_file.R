@@ -1,6 +1,7 @@
 #source code for density map 
 #question that graph acknowledges: Which National Teams has the most total wins from 1872-2022?
-
+library(tidyverse)
+library(dplyr)
 
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
