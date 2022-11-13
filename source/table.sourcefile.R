@@ -41,4 +41,4 @@ scroll_box(
   extra_css = NULL,
   fixed_thead = TRUE
 )
-
+kable(total_goals_by_team)
