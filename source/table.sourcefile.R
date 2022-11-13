@@ -1,10 +1,5 @@
 
 
-library(dplyr)
-library(tidyverse)
-
-
-
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
 
 
