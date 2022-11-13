@@ -1,28 +1,30 @@
 ---
-title: "Your Project Title"
-author: "project team members"
+title: "Analyzing International Soccer Games 1872-2022"
+author: "Shira Zur, Deeana Nasrulai, Nathan Beh"
 date: "1/22/2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
+
+## Visualization 1
 
 This World Density Map shows the total number of goals scored by each country from 1872-2022.
 
 ```{r, echo = FALSE}
-#source('/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/Deeana_source_file.R')
-#library(knitr)
-#plot(worldMap1)
+source('/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/Deeana_source_file.R')
+library(knitr)
+plot(worldMap1)
 ```
 
 This visualization allows us to see a big picture overview of National team performances from the start of data collection. This could provide analysis that could help national teams/players/supporters be informed on the status of their team's success. This also informs us which team has been the most dominant in the history of soccer.
 
-
-
+## Summary Table
 
 This table allows the reader to explore the raw data points we used in order to create the visuals displayed below. Having a table that displays this raw data is important because it allows the reader to not only use or analysis but be able to create their own conclusions because we provided them with as much information as possible and not only our visuals of the manipulated data.
+
 ```{r, echo = FALSE, results = 'asis'}
 library(dplyr)
 library(tidyverse)
@@ -39,7 +41,4 @@ total_goals_by_team %>%
   extra_css = NULL,
   fixed_thead = TRUE
 )
-
-
-
 ```
