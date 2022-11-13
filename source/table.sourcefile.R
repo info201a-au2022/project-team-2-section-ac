@@ -34,7 +34,7 @@ total_goals_by_team <- df %>%
 scroll_box(
   kable(total_goals_by_team),
   height = "500px",
-  width = "1000px",
+  width = "500px",
   box_css = "border: 1px solid #ddd; padding: 5px; ",
   extra_css = NULL,
   fixed_thead = TRUE
