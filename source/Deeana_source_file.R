@@ -54,9 +54,8 @@ Countries <- unique(Combined$region)
 
 CDF <- data.frame(label1=Countries)
 for(i in CDF) {
-  label1[i] = label1[i]+label1[i]
   Combined$value <- ifelse(Combined$region %in% CDF$label1[i], 
-  (mapData$total_goals), Combined$team) 
+  (mapData$total_goals), Combined$value) 
   
 }
 
