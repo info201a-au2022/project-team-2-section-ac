@@ -2,7 +2,9 @@
 #question that graph acknowledges: Which National Teams has the most total wins from 1872-2022?
 library(tidyverse)
 library(dplyr)
-
+library(ggmap)
+library(ggplot2)
+library(plotly)
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
 
