@@ -30,3 +30,7 @@ total_goals_by_team <- df %>%
   rename(home.goals = score.x) %>% 
   rename(away.goals = score.y) %>% 
   mutate(total_goals = home.goals + away.goals)
+
+total_goals_by_team %>%
+  kbl() %>%
+  kable_styling()
