@@ -24,10 +24,12 @@ This goal density visualization allows us to see a big picture overview of Natio
 
 This Home vs. Away Wins Ratio Bar Chart shows the overall home ratio (home wins out of total home games) and away ratio (away wins out of total away games) during every decade.
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE, results = 'hide'}
 source('../source/Shira_source_file.R')
 plot(ratio_barplot)
 ```
+
+This bar chart proves the home game advantage theory -- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. This bar chart could help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away.
 
 ## Summary Table
 
