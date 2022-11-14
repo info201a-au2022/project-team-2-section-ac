@@ -7,7 +7,7 @@ as follows:
 
 |Report | Brief Description|
 |---------------| -----------------|
-|[Project Proposal] (https://github.com/info201a-au2022/project-team-2-section-ac/blob/main/docs/p01-proposal.md) |In this project, we pull data from the “International Football Results from 1872 to 2022” dataset, which provides information about different football teams’ performance over time, including which tournaments they played at, whether the game played was a home or away game, and the city / country the team is from. From this dataset, we hope to provide statistics to potential stakeholders like sports fans and team management about which teams are historically competitive, which teams perform better at home / away games, performance by tournament, and how two teams compare to each other 
+|[Project Proposal](https://github.com/info201a-au2022/project-team-2-section-ac/blob/main/docs/p01-proposal.md) |In this project, we pull data from the “International Football Results from 1872 to 2022” dataset, which provides information about different football teams’ performance over time, including which tournaments they played at, whether the game played was a home or away game, and the city / country the team is from. From this dataset, we hope to provide statistics to potential stakeholders like sports fans and team management about which teams are historically competitive, which teams perform better at home / away games, performance by tournament, and how two teams compare to each other 
 |[Exploratory Data Analysis](./xxx) | A brief description of your exploratory data analyis report
 |[Interactive Vizualizaiton](./xxx) | A brief description of your final report. 
 
