@@ -5,7 +5,7 @@ these sub-directories (TODO: Update/Delete)
 
 |Source Directories | Brief Description|
 |---------------| -----------------|
-|[Deeana_source_file.R](project-team-2-section-ac/source/Deeana_source_file.R) | This file holds the code that produces the data visulaization of the goal density per national team.
+|[Deeana_source_file.R](/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/Deeana_source_file.R) | This file holds the code that produces the data visulaization of the goal density per national team.
 |[table.sourcefile.R](/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/table.sourcefile.R) | This file holds the code that generates a summary table of our data. 
 
 
