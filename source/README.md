@@ -6,7 +6,7 @@ these sub-directories (TODO: Update/Delete)
 |Source Directories | Brief Description|
 |---------------| -----------------|
 |[Deeana_source_file.R](https://github.com/info201a-au2022/project-team-2-section-ac/blob/main/source/Deeana_source_file.R) | This file holds the code that produces the data visulaization of the goal density per national team.
-|[table.sourcefile.R](/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/table.sourcefile.R) | This file holds the code that generates a summary table of our data. 
+|[table.sourcefile.R](https://github.com/info201a-au2022/project-team-2-section-ac/blob/main/source/table.sourcefile.R) | This file holds the code that generates a summary table of our data. 
 
 
 # DEVELOPER NOTE 1: About ...
