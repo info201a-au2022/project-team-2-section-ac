@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 This World Density Map shows the total number of goals scored by each country from 1872-2022.
 
 ```{r, echo = FALSE, message = FALSE, results = 'hide'}
-source('/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/Deeana_source_file.R')
+source('../source/Deeana_source_file.R')
 plot(worldMap1)
 ```
 
@@ -24,10 +24,22 @@ This goal density visualization allows us to see a big picture overview of Natio
 
 This Home vs. Away Wins Ratio Bar Chart shows the overall home ratio (home wins out of total home games) and away ratio (away wins out of total away games) during every decade.
 
-```{r, echo = FALSE}
-source('/Users/shira/documents/info201/project-team-2-section-ac/source/Shira_source_file.R')
+```{r, echo = FALSE, message = FALSE, results = 'hide'}
+source('../source/Shira_source_file.R')
 plot(ratio_barplot)
 ```
+
+This bar chart proves the home game advantage theory -- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. This bar chart could help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away.
+
+## Visualization 3
+This line graph shows the total number of goals (home and away) scored by England vs Scotland from 2018-2022.
+
+```{r, echo = FALSE, message = FALSE, results = 'hide'}
+source('../source/Nathan_source_file.R')
+plot(cases_plot)
+```
+This line graph allows us to compare the performance of two teams (in this case, Scotland and England). This information is useful because it allows key stakeholders such as coaches, fans, and investors to make decisions about which team to support financially / emotionally and whether a team has improved over time or not. It can also indicate things specific to an opposing team, for example, if England tends to lose more games to Scotland as opposed to other countries. 
+
 
 ## Summary Table
 
@@ -38,7 +50,8 @@ library(dplyr)
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-source('/Users/deeananasrulai/Documents/info201/project-team-2-section-ac/source/table.sourcefile.R')
+library(ggmap)
+source('../source/table.sourcefile.R')
 total_goals_by_team %>%
   kbl() %>%
   kable_styling() %>% 
