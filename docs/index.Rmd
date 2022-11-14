@@ -1,7 +1,7 @@
 ---
 title: "Analyzing International Soccer Games 1872-2022"
 author: "Shira Zur, Deeana Nasrulai, Nathan Beh"
-date: "1/22/2022"
+date: "11/13/2022"
 output: html_document
 ---
 
@@ -19,6 +19,15 @@ plot(worldMap1)
 ```
 
 This goal density visualization allows us to see a big picture overview of National team performances from the start of data collection. This could provide analysis that could help national teams/players/supporters be informed on the status of their team's success. This also informs us which team has been the most dominant in the history of soccer.
+
+## Visualization 2
+
+This Home vs. Away Wins Ratio Bar Chart shows the overall home ratio (home wins out of total home games) and away ratio (away wins out of total away games) during every decade.
+
+```{r, echo = FALSE}
+source('/Users/shira/documents/info201/project-team-2-section-ac/source/Shira_source_file.R')
+plot(ratio_barplot)
+```
 
 ## Summary Table
 
