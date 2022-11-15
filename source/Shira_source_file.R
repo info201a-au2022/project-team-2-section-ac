@@ -31,7 +31,6 @@ total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot) # I united
 # The data below created my side-by-side barplot that shows how the home advantage has existed for years; all teams have a much higher home win ratio than away win ratio.
 ratio_barplot <- ggplot(total_ratio_plot, aes(x = year, y = ratio, fill = location)) + geom_bar(stat = "identity", position = "dodge") + scale_fill_manual(values = c("#00A36C", "darkgreen")) + labs(title = "Home Wins vs. Away Wins")
 
-install.packages("ggplot2")
+
 library("ggplot2")
-install.packages("dplyr")
 library("dplyr")
