@@ -7,7 +7,6 @@ library("maps")
 install.packages("maps")
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
-View(results_df)
 
 #I will be comparing Scotland and England
 #First, I find the average score for Scotland across all their games (home and away)
@@ -46,17 +45,14 @@ scotland_home_df <- results_df %>%
   mutate(team = home_team, score = home_score) %>% 
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
-View(scotland_home_df)
 
 scotland_away_df <- results_df %>% 
   filter(away_team == "Scotland") %>% 
   mutate(team = away_team, score = away_score) %>% 
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
-View(scotland_home_df)
 
 scotland_df <- rbind(scotland_home_df, scotland_away_df)
-View(scotland_df)
 
 #Dataframe with all of England's home/away games and the # of points scored
 england_home_df <- results_df %>% 
@@ -64,17 +60,14 @@ england_home_df <- results_df %>%
   mutate(team = home_team, score = home_score) %>% 
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
-View(england_home_df)
 
 england_away_df <- results_df %>% 
   filter(away_team == "England") %>% 
   mutate(team = away_team, score = away_score) %>% 
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
-View(england_away_df)
 
 england_df <- rbind(england_home_df, england_away_df)
-View(england_df)
 
 #Line graph comparing # of points from England and Scotland over time
 cases_plot <- ggplot() + 
