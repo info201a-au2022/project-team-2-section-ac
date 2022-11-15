@@ -71,7 +71,6 @@ england_away_df <- results_df %>%
   mutate(team = away_team, score = away_score) %>% 
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
-View(england_away_df)
 
 england_df <- rbind(england_home_df, england_away_df)
 
