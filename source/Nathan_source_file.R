@@ -4,7 +4,6 @@ library(ggplot2)
 library(dplyr)
 library(tidyverse)
 library("maps")
-install.packages("maps")
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
 
@@ -79,6 +78,3 @@ cases_plot <- ggplot() +
     x = "Year",
     y = "Score"
   ) 
-  
-
-
