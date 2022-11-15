@@ -52,6 +52,7 @@ scotland_away_df <- results_df %>%
   select(date, team, score)
 
 scotland_df <- rbind(scotland_home_df, scotland_away_df)
+scotland_df <- rbind(scotland_home_df, scotland_away_df)
 
 #Dataframe with all of England's home/away games and the # of points scored
 england_home_df <- results_df %>% 
