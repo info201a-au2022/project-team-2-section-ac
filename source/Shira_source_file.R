@@ -1,5 +1,6 @@
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
-install.packages("dplyr")
+library("dplyr")
+library("ggplot2")
 library("dplyr")
 
 # I want to find the ratio of away wins:home wins and see which teams win more at home vs. which teams
@@ -32,5 +33,4 @@ total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot) # I united
 ratio_barplot <- ggplot(total_ratio_plot, aes(x = year, y = ratio, fill = location)) + geom_bar(stat = "identity", position = "dodge") + scale_fill_manual(values = c("#00A36C", "darkgreen")) + labs(title = "Home Wins vs. Away Wins")
 
 
-library("ggplot2")
-library("dplyr")
+

@@ -17,7 +17,7 @@ The visualizations below focus on various relationships we observed and analyzed
 
 This World Density Map shows the total number of goals scored by each country from 1872-2022.
 
-```{r, echo = FALSE, message = FALSE, results = 'hide'}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'hide'}
 source('../source/Deeana_source_file.R')
 plot(worldMap1)
 ```
@@ -28,28 +28,31 @@ This goal density visualization allows us to see a big picture overview of Natio
 
 This Home vs. Away Wins Ratio Bar Chart shows the overall home ratio (home wins out of total home games) and away ratio (away wins out of total away games) during every decade.
 
-```{r, echo = FALSE, message = FALSE, results = 'hide',}
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'hide'}
 source('../source/Shira_source_file.R')
 plot(ratio_barplot)
 ```
 
 This bar chart proves the home game advantage theory -- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. This bar chart could help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away.
 
-## England Vs Scotland Line Graph
+## England vs. Scotland Line Graph
 
 This line graph shows the total number of goals (home and away) scored by England vs Scotland from 2018-2022.
 
-```{r, echo = FALSE, message = FALSE, results = 'hide'}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'hide'}
 source('../source/Nathan_source_file.R')
 plot(cases_plot)
 ```
+
+
 This line graph allows us to compare the performance of two teams (in this case, Scotland and England). This information is useful because it allows key stakeholders such as coaches, fans, and investors to make decisions about which team to support financially / emotionally and whether a team has improved over time or not. It can also indicate things specific to an opposing team, for example, if England tends to lose more games to Scotland as opposed to other countries. 
 
 ## Summary Table
 
 This table allows the reader to explore the raw data points we used in order to create the visuals displayed below. Having a table that displays this raw data is important because it allows the reader to not only use or analysis but be able to create their own conclusions because we provided them with as much information as possible and not only our visuals of the manipulated data.
 
-```{r, echo = FALSE, results = 'asis', message = FALSE}
+```{r, echo = FALSE, results = 'asis', warning = FALSE, message = FALSE}
 library(dplyr)
 library(tidyverse)
 library(knitr)
