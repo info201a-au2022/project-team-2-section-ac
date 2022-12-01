@@ -5,9 +5,7 @@ library(dplyr)
 library(tidyverse)
 library("maps")
 
-
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
-
 
 #I will be comparing Scotland and England
 #First, I find the average score for Scotland across all their games (home and away)
@@ -47,16 +45,14 @@ scotland_home_df <- results_df %>%
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
 
-
 scotland_away_df <- results_df %>% 
   filter(away_team == "Scotland") %>% 
   mutate(team = away_team, score = away_score) %>% 
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
 
-
 scotland_df <- rbind(scotland_home_df, scotland_away_df)
-
+scotland_df <- rbind(scotland_home_df, scotland_away_df)
 
 #Dataframe with all of England's home/away games and the # of points scored
 england_home_df <- results_df %>% 
@@ -65,7 +61,6 @@ england_home_df <- results_df %>%
   filter(date > 2020-01-01) %>% 
   select(date, team, score)
 
-
 england_away_df <- results_df %>% 
   filter(away_team == "England") %>% 
   mutate(team = away_team, score = away_score) %>% 
@@ -73,7 +68,6 @@ england_away_df <- results_df %>%
   select(date, team, score)
 
 england_df <- rbind(england_home_df, england_away_df)
-
 
 #Line graph comparing # of points from England and Scotland over time
 cases_plot <- ggplot() + 
@@ -85,6 +79,3 @@ cases_plot <- ggplot() +
     x = "Year",
     y = "Score"
   ) 
-  
-
-
