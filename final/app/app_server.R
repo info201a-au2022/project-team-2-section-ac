@@ -88,8 +88,7 @@ server <- function(input, output) {
      geom_polygon(color = 'white') +
      #scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
      theme_bw() +
-     labs(fill = 'Goals scored', title = 'Density of Goals Scored by 
-       National Football Teams (1872-2022)', x ='', y = '') +
+     labs(fill = 'Goals scored', title = 'Goals Scored By Countries (1872-2022)', x ='', y = '') +
      scale_y_continuous(breaks = c()) +
      scale_x_continuous(breaks = c()) +
      theme(panel.border = element_blank()
@@ -110,6 +109,4 @@ server <- function(input, output) {
      theme(panel.border = element_blank()
      )
  })
- outputOptions(output, "worldMap1", suspendWhenHidden = FALSE)
- outputOptions(output, "worldMap", suspendWhenHidden = FALSE)
 }
