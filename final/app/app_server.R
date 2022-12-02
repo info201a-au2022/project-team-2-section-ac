@@ -65,7 +65,7 @@ str(WorldData) #to see the structure of the world data
 WorldData[WorldData == "USA"] <- "United States"
 WorldData[WorldData == "China"] <- "China PR"
 WorldData[WorldData == "Democratic Republic of the Congo"] <- "DR Congo"
-Combined <- WorldData[mapData$team %in% mapData$team, ]
+Combined <- WorldData[mapData$team %in% mapData$team,]
 Combined$value <- mapData$total_goals[match(Combined$region, mapData$team)]
 Countries <- unique(Combined$region)
 CDF <- data.frame(label1=Countries)
@@ -76,21 +76,40 @@ for(i in CDF) {
 }
 
 server <- function(input, output) {
-  
+  output$selectTeam <- renderUI({
+    selectInput("team", "Select National Team", choices = unique(Combined$region))
+  })
 
- output$worldMap1 <- renderPlot({ 
-   ggplot(Combined, aes(x=long, y= lat, group = group, 
-                                             fill = value) +
+ plot <- reactive ({
+   plotData <- Combined %>% 
+   filter(region %in% input$team) 
+  
+   ggplot(plotData, aes(x=long, y= lat, group = group, fill= value)) +
      geom_polygon(color = 'white') +
-     scale_fill_continuous(low = 'pale green', high = 'black', 
-                           guide = 'colorbar') +
+     #scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
+     theme_bw() +
+     labs(fill = 'Goals scored', title = 'Density of Goals Scored by 
+       National Football Teams (1872-2022)', x ='', y = '') +
+     scale_y_continuous(breaks = c()) +
+     scale_x_continuous(breaks = c()) +
+     theme(panel.border = element_blank()
+   )
+ })
+ output$worldMap1 <- renderPlot({ 
+   plot()
+ })
+ output$worldMap <- renderPlot({
+   ggplot(Combined, aes(x=long, y= lat, group = group, fill = value)) +
+     geom_polygon(color = 'white') +
+     scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
      theme_bw() +
      labs(fill = "Goals Scored", title = 'Density of Goals Scored by 
        National Football Teams (1872-2022)', x ='', y = '') +
      scale_y_continuous(breaks = c()) +
      scale_x_continuous(breaks = c()) +
-     theme(panel.border = element_blank())
-   )
+     theme(panel.border = element_blank()
+     )
  })
- 
+ outputOptions(output, "worldMap1", suspendWhenHidden = FALSE)
+ outputOptions(output, "worldMap", suspendWhenHidden = FALSE)
 }
