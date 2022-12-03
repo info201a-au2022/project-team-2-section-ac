@@ -25,13 +25,17 @@ deeanas_page <- tabPanel(
        uiOutput("selectTeam")
        ),
      mainPanel(
-       plotOutput(outputId = "worldMap1"),
-       tags$h5("The above interactive visual allows the user to select a national 
+       plotOutput(outputId = "worldMap1", height = 600, width = 600),
+       p("The above interactive visual allows the user to select a national 
                team to receive data on the visual outline of the country and the exact number 
-               of goals that team has scored in its history."),
+               of goals that team has scored in its history. This visual can be used with the global 
+         density map visual (below) if you are unsure of the location of the national team of interest."),
        tags$h2(),
        tags$h2("Global Density Map"),
-       plotOutput(outputId = "worldMap")
+       plotlyOutput(outputId = "worldMap", height = 700),
+       p("The above visual depicts the density of goals scored by National Football Teams relative to eachother,
+               where the darker the color, the more goals that country's national team has scored. By hovering over a country
+               you will also receive feedback on the exact number of goals scored.")
        )
       )
      )
