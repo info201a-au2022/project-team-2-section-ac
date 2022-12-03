@@ -27,19 +27,6 @@ home_wins_ratio_plot <- results_df %>% # I did the same thing as the above data 
 
 total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot)
 
-server <- function(input, output) {
-  
-  output$total_ratio_plot <- renderPlot({
-    
-    ggplot(total_ratio_plot, 
-           main = input$year, aes(x = year, y = ratio, fill = location)) + 
-              geom_bar(stat = "identity", position = "dodge") + 
-              scale_fill_manual(values = c("#00A36C", "darkgreen")) + 
-              labs(title = "Home Wins vs. Away Wins")
-  })
-}
-
-#Deeana's code
 new_df <- data.frame(results_df$home_team, results_df$home_score, 
                      results_df$away_team, results_df$away_score)
 
@@ -73,51 +60,62 @@ for(i in CDF) {
                            (mapData$total_goals), Combined$value) 
 }
 
+
 server <- function(input, output) {
+  
+  output$total_ratio_plot <- renderPlot({
+    
+    ggplot(total_ratio_plot, 
+           main = input$year, aes(x = year, y = ratio, fill = location)) + 
+              geom_bar(stat = "identity", position = "dodge") + 
+              scale_fill_manual(values = c("#00A36C", "darkgreen")) + 
+              labs(title = "Home Wins vs. Away Wins")
+  })
+  
   output$selectTeam <- renderUI({
     selectInput("team", "Select National Team", choices = unique(Combined$region))
   })
-
- plot <- reactive ({
-   plotData <- Combined %>% 
-   filter(region %in% input$team) 
-   ggplot(plotData, aes(x=long, y= lat, group = group, fill= value)) +
-     geom_polygon(color = 'white') +
-     #scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
-     theme_bw() +
-     labs(fill = 'Goals scored', title = 'Goals Scored By Countries (1872-2022)', x ='', y = '') +
-     scale_y_continuous(breaks = c()) +
-     scale_x_continuous(breaks = c()) +
-     theme(panel.border = element_blank()
-   )
- })
- output$worldMap1 <- renderPlot({ 
-   plot(plot)
- })
- output$worldMap <- renderPlot({
-   ggplot(Combined, aes(x=long, y= lat, group = group, fill = value)) +
-     geom_polygon(color = 'white') +
-     scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
-     theme_bw() +
-     labs(fill = "Goals Scored", title = 'Density of Goals Scored by 
+  
+  plot <- reactive ({
+    plotData <- Combined %>% 
+      filter(region %in% input$team) 
+    ggplot(plotData, aes(x=long, y= lat, group = group, fill= value)) +
+      geom_polygon(color = 'white') +
+      #scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
+      theme_bw() +
+      labs(fill = 'Goals scored', title = 'Goals Scored By Countries (1872-2022)', x ='', y = '') +
+      scale_y_continuous(breaks = c()) +
+      scale_x_continuous(breaks = c()) +
+      theme(panel.border = element_blank()
+      )
+  })
+  output$worldMap1 <- renderPlot({ 
+    plot()
+  })
+  map <- ggplot(Combined, aes(x=long, y= lat, group = group, fill = value)) +
+      geom_polygon(color = 'white') +
+      scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
+      theme_bw() +
+      labs(fill = "Goals Scored", title = 'Density of Goals Scored by 
        National Football Teams (1872-2022)', x ='', y = '') +
-     scale_y_continuous(breaks = c()) +
-     scale_x_continuous(breaks = c()) +
-     theme(panel.border = element_blank(),
-#interactive element code
-ggplotly(worldMap) %>%
+      scale_y_continuous(breaks = c()) +
+      scale_x_continuous(breaks = c()) +
+      theme(panel.border = element_blank())
+  
+  mapp <-  reactive ({
+    ggplotly(map) %>%
      highlight(
-         "plotly_hover",
-           selected = attrs_selected(line = list(color = "black"))
-             ) %>%
-             widgetframe::frameWidget()
-     )
- })
- 
-}
-
-#Nathan's Code
-server <- function(input, output) {
+       "plotly_hover",
+        selected = attrs_selected(line = list(color = "black"))
+        ) %>%
+        widgetframe::frameWidget()
+    
+  })
+            #interactive element code
+    output$worldMap<- renderPlotly({
+      map
+  })
+    
   output$comparison_plot <- renderPlotly({
     #team one's home and away scores 
     team_one_home_df <- results_df %>% 
@@ -175,5 +173,10 @@ server <- function(input, output) {
         ) 
     }
     ggplotly(comparison_plot)
-  })
+  })  
 }
+
+
+
+
+  
