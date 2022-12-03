@@ -110,3 +110,65 @@ server <- function(input, output) {
      )
  })
 }
+
+#Nathan's Code
+server <- function(input, output) {
+  output$comparison_plot <- renderPlotly({
+    #team one's home and away scores 
+    team_one_home_df <- results_df %>% 
+      filter(home_team == input$team_one) %>% 
+      mutate(team = home_team, score = home_score) %>% 
+      filter(date > input$year_range[1], date < input$year_range[2]) %>% 
+      select(date, team, score)
+    
+    team_one_away_df <- results_df %>% 
+      filter(away_team == input$team_one) %>% 
+      mutate(team = away_team, score = away_score) %>% 
+      filter(date > input$year_range[1], date < input$year_range[2]) %>% 
+      select(date, team, score)
+    
+    team_one_df <- rbind(team_one_home_df, team_one_away_df)
+    
+    #team two's home and away scores 
+    team_two_home_df <- results_df %>% 
+      filter(home_team == input$team_two) %>% 
+      mutate(team = home_team, score = home_score) %>% 
+      filter(date > input$year_range[1], date < input$year_range[2]) %>% 
+      select(date, team, score)
+    
+    team_two_away_df <- results_df %>% 
+      filter(away_team == input$team_two) %>% 
+      mutate(team = away_team, score = away_score) %>% 
+      filter(date > input$year_range[1], date < input$year_range[2]) %>% 
+      select(date, team, score)
+    
+    team_two_df <- rbind(team_two_home_df, team_two_away_df)
+    
+    team_one_name = as.character(input$team_one)
+    team_two_name = as.character(input$team_two)
+    
+    #plot
+    if(input$smooth_line) {
+      comparison_plot <- ggplot() + 
+        geom_smooth(data = team_one_df, mapping = aes(x= as.Date(date), y=score, color = team_one_name)) +
+        geom_smooth(data = team_two_df, mapping = aes(x = as.Date(date), y=score, color = team_two_name)) +
+        scale_color_manual(name = "Team", values = c("blue", "black")) +
+        labs(
+          title = paste("Games scores of", input$team_one, "vs", input$team_two, "from", input$year_range[1], "-", input$year_range[2]),
+          x = "Year",
+          y = "Score"
+        ) 
+    } else {
+      comparison_plot <- ggplot() + 
+        geom_line(data = team_one_df, mapping = aes(x= as.Date(date), y=score, color = team_one_name)) +
+        geom_line(data = team_two_df, mapping = aes(x = as.Date(date), y=score, color = team_two_name)) +
+        scale_color_manual(name = "Team", values = c("blue", "black")) +
+        labs(
+          title = paste("Games scores of", input$team_one, "vs", input$team_two, "from", input$year_range[1], "-", input$year_range[2]),
+          x = "Year",
+          y = "Score"
+        ) 
+    }
+    ggplotly(comparison_plot)
+  })
+}

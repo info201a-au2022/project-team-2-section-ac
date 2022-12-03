@@ -5,15 +5,16 @@ library(ggplot2)
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
 
-# introduction_page <- tabPanel(
-#   "Introduction",
-#   p("This is the introduction for the soccer app.")
-# )
+introduction_page <- tabPanel(
+  "Introduction",
+  p("In this application. We will answer the following questions:"),
+  p("Which national teams are more likely to win home vs away games (bar graph)?"),
+  p("Which national teams has the most total wins from 1872-2022 (density map)?"),
+  p("What is the goal performance of X team compared to Y team (line graph)? "),
+  p("To answer these questions, we will use the data set “International Football Results from 1872 to 2022”. This dataset includes the dates, home / away teams, home / away scores, and locations of each game. "),
+  img("", src = "https://media2.giphy.com/media/l3q2Ip7FrmPE33EiI/giphy.gif")
+)
 # 
-# nathans_page <- tabPanel(
-#   "Nathan's Analysis",
-#   p("This is the interactive graph for comparing two teams performance"),
-# )
 
 source('app_server.R')
 deeanas_page <- tabPanel(
@@ -64,6 +65,47 @@ shiras_page <- tabPanel(
     )
   )
 
+#Nathan's Code 
+inputs <- sidebarPanel(
+  sliderInput(
+    inputId = "year_range",
+    label = "Choose date range",
+    min = min(as.Date(results_df$date)), 
+    max = max(as.Date(results_df$date)),
+    value = range(as.Date(results_df$date)),
+    timeFormat = "%Y-%m-%d"
+  ),
+  selectInput(
+    inputId = "team_one",
+    label = "Choose 1st team",
+    choices = unique(results_df$home_team),
+    selected = "England"
+  ),
+  selectInput(
+    inputId = "team_two",
+    label = "Choose 2nd team",
+    choices = unique(results_df$home_team),
+    selected = "Scotland"
+  ),
+  checkboxInput(
+    inputId = "smooth_line",
+    label = "Show smooth line?",
+    value = T
+  )
+)
+
+nathans_page <- tabPanel(
+  "Comparing Team Performance",
+  titlePanel("Comparing Team Performance"),
+  p("This is the interactive graph for comparing two teams performance"),
+  sidebarLayout(inputs, 
+                mainPanel(plotlyOutput("comparison_plot"))),
+  p("This plot allows users to compare the performance for two teams. The user can select the teams they want to
+    compare, adjust the timeframe of comparison, and show a smooth line to spot general trends. Insights gained
+    from this chart include, which teams have performed better historically, which teams are growing more competitive
+    in recent years, and the likelihood of a team winning against the other.")
+)
+
 
 report_page <- tabPanel(
   "Report Page",
@@ -71,4 +113,4 @@ report_page <- tabPanel(
   p("From looking at the", em("International Football Results from 1872 to 2022"), "results, we have made a lot of interesting discoveries. Firstly, we created a map visualization that revealed the number of goals scored per country. This goal density visualization allowed us to see a big picture overview of national teams’ performance. We figure that this type of analysis can help the national teams themselves, but also the players and supporters as they can be informed on the status of their team’s success. Secondly, we created a home goal vs. away goal bar chart over time. The bar chart helped prove the", em("home game advantage theory"), "-- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. We figure that this type of analysis can help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away. Lastly, we created a line graph analysis of two teams -- Scotland and England -- to show how two teams can be compared and to inspire similar comparison analysis in the future. We figure this type of information can help coaches, fans, and investors make decisions about which team to support financially. Overall, our project reveals the various and interesting ways that soccer data can be observed and analyzed.")
 )
 
-ui <- navbarPage("AC-2 Project", shiras_page, report_page, deeanas_page, summary_page)
+ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, report_page, deeanas_page, summary_page)
