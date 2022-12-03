@@ -14,12 +14,11 @@ introduction_page <- tabPanel(
   p("To answer these questions, we will use the data set “International Football Results from 1872 to 2022”. This dataset includes the dates, home / away teams, home / away scores, and locations of each game. "),
   img("", src = "https://media2.giphy.com/media/l3q2Ip7FrmPE33EiI/giphy.gif")
 )
-# 
+ 
 
-source('app_server.R')
+source("./app_server.R")
 deeanas_page <- tabPanel(
   "National Team's Goal Density",
-    
    titlePanel("National Team's Goal Density"),
    sidebarLayout(      
      sidebarPanel(
@@ -28,7 +27,7 @@ deeanas_page <- tabPanel(
      mainPanel(
        plotOutput(outputId = "worldMap1"),
        tags$h5("The above interactive visual allows the user to select a national 
-               team to receive data on the visula shape of the country and the exact number 
+               team to receive data on the visual outline of the country and the exact number 
                of goals that team has scored in its history."),
        tags$h2(),
        tags$h2("Global Density Map"),
@@ -41,7 +40,36 @@ deeanas_page <- tabPanel(
 summary_page <- tabPanel(
   "Summary",
   titlePanel("Summary Takeaways"), 
-  p("text")
+  p("The research questions posed based on our dataset led to a variety of 
+  conclusions through our visual analysis. By examining and visualizing multiple 
+  aspects of the dataset, we were better able to understand the significance and
+  value of our findings. Our Takeaways:"),
+  tags$div(
+    tags$ul(
+      tags$li("The phrase “home team advantage” is proven true based on the 
+      obvious differences in goals scored when teams were at their home location 
+      compared to their away location. This trend was apparent for every year in 
+      our dataset.")
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li("The visualization of goals scored per country allows us to compare 
+      the success of different national teams based on goal performance. Not only 
+      does the visualization compare the density of goals in a worldwide perspective, 
+      but the interactive features allows the user to handpick countries to receive 
+      feedback on the exact number of goals that the National team has scored in
+      their history.")
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li("The analysis that we provided based on the line graph that 
+      depicted the performances of the England and Scotland national teams can 
+      be extremely useful in examining the improvement of the teams which is 
+      critical information for coaches, investors, and fans.")
+    )
+  )
 )
 
 
@@ -113,4 +141,4 @@ report_page <- tabPanel(
   p("From looking at the", em("International Football Results from 1872 to 2022"), "results, we have made a lot of interesting discoveries. Firstly, we created a map visualization that revealed the number of goals scored per country. This goal density visualization allowed us to see a big picture overview of national teams’ performance. We figure that this type of analysis can help the national teams themselves, but also the players and supporters as they can be informed on the status of their team’s success. Secondly, we created a home goal vs. away goal bar chart over time. The bar chart helped prove the", em("home game advantage theory"), "-- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. We figure that this type of analysis can help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away. Lastly, we created a line graph analysis of two teams -- Scotland and England -- to show how two teams can be compared and to inspire similar comparison analysis in the future. We figure this type of information can help coaches, fans, and investors make decisions about which team to support financially. Overall, our project reveals the various and interesting ways that soccer data can be observed and analyzed.")
 )
 
-ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, report_page, deeanas_page, summary_page)
+ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, deeanas_page, report_page, summary_page)
