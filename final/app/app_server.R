@@ -2,7 +2,6 @@ library(dplyr)
 library(shiny)
 library(plotly)
 library(ggplot2)
-library(leaflet)
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
 
@@ -72,7 +71,6 @@ CDF <- data.frame(label1=Countries)
 for(i in CDF) {
   Combined$value <- ifelse(Combined$region %in% CDF$label1[i], 
                            (mapData$total_goals), Combined$value) 
-  
 }
 
 server <- function(input, output) {
@@ -83,7 +81,6 @@ server <- function(input, output) {
  plot <- reactive ({
    plotData <- Combined %>% 
    filter(region %in% input$team) 
-  
    ggplot(plotData, aes(x=long, y= lat, group = group, fill= value)) +
      geom_polygon(color = 'white') +
      #scale_fill_continuous(low = 'pale green', high = 'black', guide = 'colorbar') +
@@ -95,7 +92,7 @@ server <- function(input, output) {
    )
  })
  output$worldMap1 <- renderPlot({ 
-   plot()
+   plot(plot)
  })
  output$worldMap <- renderPlot({
    ggplot(Combined, aes(x=long, y= lat, group = group, fill = value)) +
@@ -106,9 +103,17 @@ server <- function(input, output) {
        National Football Teams (1872-2022)', x ='', y = '') +
      scale_y_continuous(breaks = c()) +
      scale_x_continuous(breaks = c()) +
-     theme(panel.border = element_blank()
+     theme(panel.border = element_blank(),
+#interactive element code
+ggplotly(worldMap) %>%
+     highlight(
+         "plotly_hover",
+           selected = attrs_selected(line = list(color = "black"))
+             ) %>%
+             widgetframe::frameWidget()
      )
  })
+ 
 }
 
 #Nathan's Code
