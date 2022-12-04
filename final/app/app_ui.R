@@ -1,5 +1,5 @@
 library(dplyr)
-#library(shiny)
+library(shiny)
 library(plotly)
 library(ggplot2)
 
@@ -15,21 +15,21 @@ results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_
 #   p("This is the interactive graph for comparing two teams performance"),
 # )
 
-source('app_server.R')
-deeanas_page <- tabPanel(
-  "National Team's Goal Density",
-    
-   titlePanel("National Team's Goal Density"),
-   sidebarLayout(      
-     sidebarPanel(
-       uiOutput("selectTeam")
-       ),
-     mainPanel(
-       plotOutput(outputId = "worldMap1"),
-       plotOutput(outputId = "worldMap"))
-       
-     )
-   )
+# source('app_server.R')
+# deeanas_page <- tabPanel(
+#   "National Team's Goal Density",
+#     
+#    titlePanel("National Team's Goal Density"),
+#    sidebarLayout(      
+#      sidebarPanel(
+#        uiOutput("selectTeam")
+#        ),
+#      mainPanel(
+#        plotOutput(outputId = "worldMap1"),
+#        plotOutput(outputId = "worldMap"))
+#        
+#      )
+#    )
 
 summary_page <- tabPanel(
   "Summary",
