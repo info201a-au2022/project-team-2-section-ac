@@ -1,7 +1,7 @@
 # Final Project Repository
 **INFO-201: _Foundational Skills For Data Science_ (Autumn 2022)**
 
-*P01: Project Proposal*: [Project Proposal Title - Edit Me!](./docs/p01-proposal.md) 
+*P01: Project Proposal*: [Project Proposal-Analyzing International Soccer Games from 1872-2022](./docs/p01-proposal.md) 
 
 
 |Project Directories | Brief Description|
@@ -10,6 +10,7 @@
 |[`/docs`](./docs) | All project reports and web documents will be published from this directory. This includes Markdown files (.md), R Markdown files (.Rmd),   HTML files (.html), and so on. The `./docs` directory is the root directory of the website for your project. It will also be used to store all of your design work and project documentation.|
 |[`/instructions`](./instructions)| This directory contains the project design brief.  |
 |[`/source`](./source) | All for your R source code will be located in this directory. To organize your code, you might also decide to create sub-directories.
+|[`/final`](./final) | All code for shiny application stored here. 
 | .gitignore | This  file is important. It tells git to ignore all files that are listed therein. Ignoring "non-useful" files will make it *much* easier to work togther in your team. See Freeman and Ross (2019, section 3.6) for details.  |
 | LICENSE | This is a straigtforward software license that basically says "You own the copyright of your code.  Others can use your code, so long as they cite that they are doing so." You should put your names into the LICENSE file. If you would like to use a different license, that would be fine! |
 
