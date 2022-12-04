@@ -2,17 +2,31 @@ library(dplyr)
 #library(shiny)
 library(plotly)
 library(ggplot2)
+library(maps)
 
 results_df <- read.csv("https://raw.githubusercontent.com/martj42/international_results/master/results.csv")
 
 introduction_page <- tabPanel(
   "Introduction",
-  p("In this application. We will answer the following questions:"),
-  p("Which national teams are more likely to win home vs away games (bar graph)?"),
-  p("Which national teams has the most total wins from 1872-2022 (density map)?"),
-  p("What is the goal performance of X team compared to Y team (line graph)? "),
-  p("To answer these questions, we will use the data set “International Football Results from 1872 to 2022”. This dataset includes the dates, home / away teams, home / away scores, and locations of each game. "),
-  img("", src = "https://media2.giphy.com/media/l3q2Ip7FrmPE33EiI/giphy.gif")
+  titlePanel("Introduction"),
+  p("In this project, we pull data from the “International Football Results from 1872 to 2022” dataset, which provides information about different football teams’ performance over time, including which tournaments they played at, whether the game played was a home or away game, and the city / country the team is from. In the game of soccer, statistics and performance analysis is crucial to a team's success. Understanding an opponent's track record in games not only helps prepare strategies & tactics for upcoming tournaments, but also provides important insight towards team investors and soccer fans alike. In this application, we seek to provide valuable insight to key stakeholders by answering the following questions:"),
+  tags$div(
+    tags$ul(
+      tags$li("Which national teams are more likely to win home vs away games (bar graph)?")
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li("Which national teams has the most total wins from 1872-2022 (density map)?")
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li("What is the goal performance of X team compared to Y team (line graph)?")
+    )
+  ),
+  p("Key insights revealed include whether teams perform better at home vs away games, which teams are the most historically commpetitive, and how the goal performance between two teams has changed throughout time."),
+  img(src = "soccer_ball.webp", height = 300, width = 300)
 )
  
 
@@ -129,20 +143,19 @@ inputs <- sidebarPanel(
 nathans_page <- tabPanel(
   "Comparing Team Performance",
   titlePanel("Comparing Team Performance"),
-  p("This is the interactive graph for comparing two teams performance"),
   sidebarLayout(inputs, 
-                mainPanel(plotlyOutput("comparison_plot"))),
-  p("This plot allows users to compare the performance for two teams. The user can select the teams they want to
+                mainPanel(plotlyOutput("comparison_plot"),
+                          p("This plot allows users to compare the performance for two teams. The user can select the teams they want to
     compare, adjust the timeframe of comparison, and show a smooth line to spot general trends. Insights gained
     from this chart include, which teams have performed better historically, which teams are growing more competitive
-    in recent years, and the likelihood of a team winning against the other.")
+    in recent years, and the likelihood of a team winning against the other."))),
 )
 
 
 report_page <- tabPanel(
   "Report Page",
   titlePanel("Report Page"),
-  p("From looking at the", em("International Football Results from 1872 to 2022"), "results, we have made a lot of interesting discoveries. Firstly, we created a map visualization that revealed the number of goals scored per country. This goal density visualization allowed us to see a big picture overview of national teams’ performance. We figure that this type of analysis can help the national teams themselves, but also the players and supporters as they can be informed on the status of their team’s success. Secondly, we created a home goal vs. away goal bar chart over time. The bar chart helped prove the", em("home game advantage theory"), "-- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. We figure that this type of analysis can help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away. Lastly, we created a line graph analysis of two teams -- Scotland and England -- to show how two teams can be compared and to inspire similar comparison analysis in the future. We figure this type of information can help coaches, fans, and investors make decisions about which team to support financially. Overall, our project reveals the various and interesting ways that soccer data can be observed and analyzed.")
+  p("From looking at the", em("International Football Results from 1872 to 2022"), "results, we have made a lot of interesting discoveries. Firstly, we created a map visualization that revealed the number of goals scored per country. This goal density visualization allowed us to see a big picture overview of national teams’ performance. We figure that this type of analysis can help the national teams themselves, but also the players and supporters as they can be informed on the status of their team’s success. Secondly, we created a home goal vs. away goal bar chart over time. The bar chart helped prove the", em("home game advantage theory"), "-- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. We figure that this type of analysis can help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away. Lastly, we created a line graph analysis of two user selected teams to show how two teams can be compared and to inspire similar comparison analysis in the future. We figure this type of information can help coaches, fans, and investors make decisions about which team to support financially. Overall, our project reveals the various and interesting ways that soccer data can be observed and analyzed.")
 )
 
 ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, deeanas_page, report_page, summary_page)
