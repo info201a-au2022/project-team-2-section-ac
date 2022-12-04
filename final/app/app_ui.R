@@ -143,6 +143,7 @@ report_page <- tabPanel(
   "Report Page",
   titlePanel("Report Page"),
   p("From looking at the", em("International Football Results from 1872 to 2022"), "results, we have made a lot of interesting discoveries. Firstly, we created a map visualization that revealed the number of goals scored per country. This goal density visualization allowed us to see a big picture overview of national teams’ performance. We figure that this type of analysis can help the national teams themselves, but also the players and supporters as they can be informed on the status of their team’s success. Secondly, we created a home goal vs. away goal bar chart over time. The bar chart helped prove the", em("home game advantage theory"), "-- a theory that states that teams that play a match in their home city are more likely to win than teams that play a match away, at a city they are not from. We figure that this type of analysis can help team managers and coaches that are worried that the home game advantage may no longer serve them; they can refer to this analysis and see that when they play home, they will be much more likely to win, and therefore need to prepare their teams when they play away. Lastly, we created a line graph analysis of two teams -- Scotland and England -- to show how two teams can be compared and to inspire similar comparison analysis in the future. We figure this type of information can help coaches, fans, and investors make decisions about which team to support financially. Overall, our project reveals the various and interesting ways that soccer data can be observed and analyzed.")
-)
+
+  )
 
 ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, deeanas_page, report_page, summary_page)
