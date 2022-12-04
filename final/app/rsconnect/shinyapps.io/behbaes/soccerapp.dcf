@@ -1,0 +1,13 @@
+name: soccerapp
+title: soccerapp
+username:
+account: behbaes
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7805751
+bundleId: 6587704
+url: https://behbaes.shinyapps.io/soccerapp/
+when: 1670114435.13497
+lastSyncTime: 1670114435.13499
+asMultiple: FALSE
+asStatic: FALSE
