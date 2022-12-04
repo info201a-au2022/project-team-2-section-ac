@@ -7,7 +7,11 @@
 #    http://shiny.rstudio.com/
 #
 
+library(dplyr)
 library(shiny)
+library(plotly)
+library(ggplot2)
+library(maps)
 
 #sourcing the two other files 
 source("./app_ui.R", local = knitr::knit_global())
