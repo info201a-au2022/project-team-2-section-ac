@@ -29,8 +29,6 @@ introduction_page <- tabPanel(
   img(src = "soccer_ball.webp", height = 300, width = 300)
 )
  
-
-<<<<<<< HEAD
 # source('app_server.R')
 # deeanas_page <- tabPanel(
 #   "National Team's Goal Density",
@@ -46,7 +44,7 @@ introduction_page <- tabPanel(
 #        
 #      )
 #    )
-=======
+
 source("./app_server.R")
 deeanas_page <- tabPanel(
   "National Team's Goal Density",
@@ -70,8 +68,6 @@ deeanas_page <- tabPanel(
        )
       )
      )
-   
->>>>>>> 12ccd11ad949eeb2eec4f4e88c4f3dd3bba23391
 
 summary_page <- tabPanel(
   "Summary",
@@ -114,19 +110,18 @@ shiras_page <- tabPanel(
     titlePanel("Home Goals vs. Away Goals"),
     
     sidebarLayout(      
-      
       sidebarPanel(
-        selectInput("year", "Year:", 
-                    choices=total_ratio_plot$year),
-        hr(),
-        helpText("Data from International Football results.")
+        uiOutput("selectRange")
       ),
       
       mainPanel(
-        plotOutput("total_ratio_plot")  
-      )
-      
-    )
+        plotOutput("ratioPlot")  
+      ),
+    ),
+    
+    p("The bar graph above represents the home goal ratio vs. the away goal ratio over time.
+      The user can use the slider input to change the year range of the bar graph to see how the ratio
+      has changed over time.")
   )
 
 #Nathan's Code 
