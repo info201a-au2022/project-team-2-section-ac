@@ -213,18 +213,6 @@ report_page <- tabPanel(
   ),
   tags$div(
     tags$ul(
-      tags$li("Abstract: Our main question asks what insights we can gather
-              from extracting data from a record of International Soccer
-              Games (1872-2022). This question is important because it allows
-              us to make predictions about the performance of different
-              teams and whether factors like home vs away games influence
-              the outcome of a game. To address this question, we will use
-              data extraction and visualization techniques to organize,
-              manipulate, and sort data.")
-    )
-  ),
-  tags$div(
-    tags$ul(
       tags$li("Keywords: sports, soccer, game analytics, game
                                prediction, team performance.")
     )
