@@ -28,7 +28,7 @@ home_wins_ratio_plot <- results_df %>% # I did the same thing as the above data 
 
 total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot)
 
-<<<<<<< HEAD
+
 # new_df <- data.frame(results_df$home_team, results_df$home_score, 
 #                      results_df$away_team, results_df$away_score)
 # 
@@ -261,8 +261,6 @@ server <- function(input, output) {
 #     ggplotly(comparison_plot)
 #   })  
 
-=======
->>>>>>> c0b788e83c7252fc755be7bb6e30d1465cbb72aa
 new_df <- data.frame(results_df$home_team, results_df$home_score, 
                      results_df$away_team, results_df$away_score)
 #deeana's code
@@ -463,8 +461,8 @@ for(i in CDF) {
     }
     ggplotly(comparison_plot)
   })  
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> c0b788e83c7252fc755be7bb6e30d1465cbb72aa
+
+
+
