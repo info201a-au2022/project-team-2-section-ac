@@ -115,14 +115,17 @@ shiras_page <- tabPanel(
       ),
       
       mainPanel(
-        plotOutput("ratioPlot")  
-      ),
-    ),
-    
-    p("The bar graph above represents the home goal ratio vs. the away goal ratio over time.
+        plotOutput("ratioPlot"),
+        p("The bar graph above represents the home goal ratio vs. the away goal ratio over time.
       The user can use the slider input to change the year range of the bar graph to see how the ratio
-      has changed over time.")
-  )
+      has changed over time."),
+
+      )
+      )
+        )
+    
+  
+
 
 #Nathan's Code 
 inputs <- sidebarPanel(

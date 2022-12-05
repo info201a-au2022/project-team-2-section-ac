@@ -28,6 +28,7 @@ home_wins_ratio_plot <- results_df %>% # I did the same thing as the above data 
 
 total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot)
 
+<<<<<<< HEAD
 # new_df <- data.frame(results_df$home_team, results_df$home_score, 
 #                      results_df$away_team, results_df$away_score)
 # 
@@ -260,6 +261,8 @@ server <- function(input, output) {
 #     ggplotly(comparison_plot)
 #   })  
 
+=======
+>>>>>>> c0b788e83c7252fc755be7bb6e30d1465cbb72aa
 new_df <- data.frame(results_df$home_team, results_df$home_score, 
                      results_df$away_team, results_df$away_score)
 #deeana's code
@@ -296,14 +299,21 @@ for(i in CDF) {
 
  server <- function(input, output) {
    output$selectRange <- renderUI({ 
-     sliderInput("Range", "Choose a year range:", min = 1870, max = 2020, value = 1870)
+     sliderInput(
+       inputId= "Range",
+       label ="Choose a year range:", 
+       min = 1870, 
+       max = 2020, 
+       value = range(1870, 1950),
+       step = 10,
+       timeFormat = "%Y")
    })
-   
+
    barPlot <- reactive({
      plotData <- total_ratio_plot %>%
-       filter(year <= input$Range)
+       filter(year %in% input$Range)
      
-     ggplot(total_ratio_plot, aes(x = year, y = ratio, fill = location)) + 
+     ggplot(plotData, aes(x = year, y = ratio, fill = location)) + 
        geom_bar(stat = "identity", position = "dodge") + 
        scale_fill_manual(values = c("#00A36C", "darkgreen")) + 
        labs(title = "Home Wins vs. Away Wins")
@@ -453,4 +463,8 @@ for(i in CDF) {
     }
     ggplotly(comparison_plot)
   })  
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c0b788e83c7252fc755be7bb6e30d1465cbb72aa
