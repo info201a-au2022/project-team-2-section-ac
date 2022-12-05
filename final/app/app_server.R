@@ -29,7 +29,7 @@ home_wins_ratio_plot <- results_df %>% # I did the same thing as the above data 
 total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot)
 
 
-<<<<<<< HEAD
+
 # new_df <- data.frame(results_df$home_team, results_df$home_score, 
 #                      results_df$away_team, results_df$away_score)
 # 
@@ -63,7 +63,7 @@ total_ratio_plot <- union(away_wins_ratio_plot, home_wins_ratio_plot)
 #                            (mapData$total_goals), Combined$value) 
 # }
 # 
-=======
+
 new_df <- data.frame(results_df$home_team, results_df$home_score,
                      results_df$away_team, results_df$away_score)
 
@@ -97,7 +97,7 @@ for(i in CDF) {
                            (mapData$total_goals), Combined$value)
 }
 
->>>>>>> 4e8eaaf72449f40912a65f019b1dabfb7b4b7a69
+
 
 server <- function(input, output) {
   
@@ -501,8 +501,3 @@ for(i in CDF) {
 
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4e8eaaf72449f40912a65f019b1dabfb7b4b7a69
