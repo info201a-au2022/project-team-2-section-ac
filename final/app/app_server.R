@@ -66,7 +66,7 @@ for(i in CDF) {
 server <- function(input, output) {
   
   output$selectRange <- renderUI({ 
-    sliderInput("Range", "Choose a year range:", min = 1870, max = 2020, value = 1870)
+    sliderInput("Range", "Choose a year range:", min = 1870, max = 2020, value = 1870, sep = "")
   })
   
   barPlot <- reactive({
