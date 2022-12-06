@@ -28,6 +28,7 @@ introduction_page <- tabPanel(
   p("Key insights revealed include whether teams perform better at home vs away games, which teams are the most historically commpetitive, and how the goal performance between two teams has changed throughout time."),
   img(src = "soccer_ball.webp", height = 300, width = 300)
 )
+<<<<<<< HEAD
 
 # source('app_server.R')
 # deeanas_page <- tabPanel(
@@ -44,6 +45,8 @@ introduction_page <- tabPanel(
 #        
 #      )
 #    )
+=======
+>>>>>>> 64c9a51bf80aacafcd640e453380e44cdb9e76dd
 
 source("./app_server.R")
 deeanas_page <- tabPanel(

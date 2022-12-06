@@ -418,6 +418,7 @@ for(i in CDF) {
       map
   })
     
+#Nathan's Code
   output$comparison_plot <- renderPlotly({
     #team one's home and away scores 
     team_one_home_df <- results_df %>% 
