@@ -118,7 +118,8 @@ shiras_page <- tabPanel(
       plotOutput("ratioPlot"),
       p("The bar graph above represents the home goal ratio vs. the away goal ratio over time.
       The user can use the slider input to change the year range of the bar graph to see how the ratio
-      has changed over time."),
+      has changed over time. The purpose of the bar graph is to show that the home advantage theory exists and
+      that while it has changed slightly from year to year, overall teams are more likely to win at home than away."),
       
     )
   )
@@ -174,52 +175,52 @@ report_page <- tabPanel(
 
   tags$div(
     tags$ul(
-      tags$li("Code name: Soccer Data")
+      tags$li(h3("Code name:"), p("Soccer Data"))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Project title: Analyzing International Soccer Games from 1872
-              - 2022")
+      tags$li(h3("Project title:"), p("Analyzing International Soccer Games from 1872
+              - 2022"))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Authors: Shira Zur, Deeana Nasrulai, Nathan Beh")
+      tags$li(h3("Authors:"), p("Shira Zur, Deeana Nasrulai, Nathan Beh"))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Affiliation: INFO-201: Technical Foundations of Informatics -
-              The Information School - University of Washington")
+      tags$li(h3("Affiliation:"), p("INFO-201: Technical Foundations of Informatics -
+              The Information School - University of Washington"))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Date: Autumn 2022")
+      tags$li(h3("Date:"), p("Autumn 2022"))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Abstract: Our main question asks what insights we can gather
+      tags$li(h3("Abstract:"), p("Our main question asks what insights we can gather
               from extracting data from a record of International Soccer Games
               (1872-2022). This question is important because it allows us to
               make predictions about the performance of different teams and
               whether factors like home vs away games influence the outcome of
               a game. To address this question, we will use data extraction
               and visualization techniques to organize, manipulate, and sort
-              data.")
+              data."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Keywords: sports, soccer, game analytics, game
-                               prediction, team performance.")
+      tags$li(h3("Keywords:"), p("sports, soccer, game analytics, game
+                               prediction, team performance."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Introduction: In this project, we pull data from the
+      tags$li(h3("Introduction:"), p("In this project, we pull data from the
               “International Football Results from 1872 to 2022” dataset,
               which provides information about different football teams’
               performance over time, including which tournaments they
@@ -235,12 +236,12 @@ report_page <- tabPanel(
               summarize data, as well as our domain knowledge in sports to
               aid our understanding of the data. We will also use different
               data visualizations (bars, charts, and graphs) to display
-              information in a clear and visually engaging way.")
+              information in a clear and visually engaging way."))
       )
     ),
   tags$div(
     tags$ul(
-      tags$li("Problem Domain: Sociotechnical Setting: Our topic’s setting
+      tags$li(h3("Problem Domain:"), p("Sociotechnical Setting: Our topic’s setting
       is the result of all the first official matches beginning from 1872
       and ending in 2019. Looking at the sociotechnical part of this setting,
       it’s evident that the technical aspect of gathering this data was
@@ -263,8 +264,8 @@ report_page <- tabPanel(
       see which teams have been the most successful in the past several
       years and therefore use this information when scouting for new players.
       Indirect stakeholder: According to a recent study about ethical
-      leadership in sports [https://www.ncbi.nlm.nih.gov/pmc/articles/
-      PMC7747760], indirect stakeholders in the professional soccer industry
+      leadership in sports ("),a("https://www.ncbi.nlm.nih.gov/pmc/articles/
+      PMC7747760"),p(") indirect stakeholders in the professional soccer industry
       include soccer coaches. While soccer coaches may not directly seek
       this data, the board of soccer clubs may use this information to
       impact their relationship with individual coaches, making coaches
@@ -277,12 +278,12 @@ report_page <- tabPanel(
       Harms: A clear harm of this data is that it excluded women’s soccer.
       This data is even further harder to analyze due to a lack of
       collection, and this data set is continuing this pattern by excluding
-      a whole gender of soccer games and teams.")
+      a whole gender of soccer games and teams."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Research Questions: Which national teams are more likely to
+      tags$li(h3("Research Questions:"), p("Which national teams are more likely to
       win at home or away games? This question enables us to dive into the
       performance statistics of the temas to conduct analysis to conclude
       whether the term “home team advantage” is true. Which National Teams
@@ -304,12 +305,12 @@ report_page <- tabPanel(
       performance of X team compared to Y team? This question allows us to
       compare only the performances of two teams. This is an important
       question for those who want to know the chances of one team winning
-      over another or which team outperforms the other in goals.")
+      over another or which team outperforms the other in goals."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("The Dataset: The data set we are using is called
+      tags$li(h3("The Dataset:"), p("The data set we are using is called
               “International Football Results from 1872 to 2022”.
               This data set relates to our problem domain/research
               question as were our analyzing the performance of different
@@ -321,9 +322,8 @@ report_page <- tabPanel(
               files, one of match results, and another of penalty shootout
               results is any of the tournament matches ended in a tie.
               Number of rows: 44,061, 506. Number of Columns: 9, 4. Link
-              to Dataset: [International Football Results from 1872 to 2022]:
-              https://www.kaggle.com/datasets/martj42/international-football-
-              results-from-1872-to-2017. We found this data set through
+              to Dataset: ("), a("https://www.kaggle.com/datasets/martj42/
+              international-football-results-from-1872-to-2017"), p(") We found this data set through
               Kaggle. The data was collected from several sources including
               Wikipedia, individual football associations’ websites, and
               rsssf.com (Rec Sport Soccer Statistics). The data was
@@ -337,12 +337,12 @@ report_page <- tabPanel(
               we individually fact check each match in the data set- as
               it was a private citizen who collected this data as a hobby
               but the data is updated regularly to give us accurate
-              information.")
+              information."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Findings: Through our 3 visualizations we have made 3
+      tags$li(h3("Findings:"), p("Through our 3 visualizations we have made 3
               findings from our analyzations. Through our interactive
               world map, we have found which teams have scored the most
               goals and which teams have scored the least over time.
@@ -352,12 +352,12 @@ report_page <- tabPanel(
               our interactive comparison line graph, we have found that
               it is very useful to compare different teams statistically
               to see which ones are stronger and have remained more
-              successful over time than others.")
+              successful over time than others."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Discussion: It seems that there is still a lot more to
+      tags$li(h3("Discussion:"), p("It seems that there is still a lot more to
               discuss when it comes to the soccer data, and we hope our
               analysis has sparked more thoughts about how soccer data
               can be analyzed. We wonder how the home ratio vs. away
@@ -369,12 +369,12 @@ report_page <- tabPanel(
               using our interactive line graph help predict World Cup
               matches, for instance? Overall, we hope our analysis will
               continue to spark more ideas on how soccer data can be
-              analyzed in the future.")
+              analyzed in the future."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("Conclusion: In conclusion, it seems we have more to learn
+      tags$li(h3("Conclusion:"), p("In conclusion, it seems we have more to learn
               about analyzing soccer data, but we feel that we have provided
               some insightful conversations on how one can start breaking
               down such a large data set and find patterns within it. Our
@@ -385,21 +385,39 @@ report_page <- tabPanel(
               have more funding and consequently higher statistics than
               poorer teams. Our data also had missing parts to it which
               impacted our results. However, overall, we hope we have
-              sparked a strong conversation about soccer data analysis.")
+              sparked a strong conversation about soccer data analysis."))
     )
   ),
   tags$div(
     tags$ul(
-      tags$li("References: Jürisoo, Mart. International Football Results
-              from 1872 to 2022. Kaggle. Web. https://www.kaggle.com/
+      tags$li(h3("References:"))
+      )
+    ), 
+  tags$div(
+    tags$ul(
+      tags$li(a("https://www.kaggle.com/
               datasets/martj42/international-football-results-from-1872-to-
-              2017/discussion?resource=download, https://www.professional
+              2017/discussion?resource=download"))
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li(a("https://www.professional
               footballjournal.fifa.com/pfj2-7-football-stakeholders#:~:tex
               t=The%20professional%20football%20industry%20is,%2C%20clubs%
-              2C%20leagues%20and%20players, https://www.ncbi.nlm.nih.gov/
-              pmc/articles/PMC7747760/, https://www.theguardian.com/football
+              2C%20leagues%20and%20players"))
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li(a("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7747760/"))
+    )
+  ),
+  tags$div(
+    tags$ul(
+      tags$li(a("https://www.theguardian.com/football
               /blog/2022/oct/31/data-has-improved-our-understanding-of-
-              football-but-it-remains-a-sport-of-luck.")
+              football-but-it-remains-a-sport-of-luck."))
     )
   )
 )
