@@ -18,5 +18,4 @@ source("./app_ui.R", local = knitr::knit_global())
 source("./app_server.R", local = knitr::knit_global())
 
 # Run the application 
-options = (shiny.error = browser)
 shinyApp(ui = ui, server = server)
