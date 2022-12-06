@@ -5,9 +5,9 @@ account: behbaes
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7805751
-bundleId: 6587704
+bundleId: 6596527
 url: https://behbaes.shinyapps.io/soccerapp/
-when: 1670114435.13497
-lastSyncTime: 1670114435.13499
+when: 1670285267.98817
+lastSyncTime: 1670285267.98819
 asMultiple: FALSE
 asStatic: FALSE

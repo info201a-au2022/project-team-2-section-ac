@@ -28,22 +28,6 @@ introduction_page <- tabPanel(
   p("Key insights revealed include whether teams perform better at home vs away games, which teams are the most historically commpetitive, and how the goal performance between two teams has changed throughout time."),
   img(src = "soccer_ball.webp", height = 300, width = 300)
 )
- 
-# source('app_server.R')
-# deeanas_page <- tabPanel(
-#   "National Team's Goal Density",
-#     
-#    titlePanel("National Team's Goal Density"),
-#    sidebarLayout(      
-#      sidebarPanel(
-#        uiOutput("selectTeam")
-#        ),
-#      mainPanel(
-#        plotOutput(outputId = "worldMap1"),
-#        plotOutput(outputId = "worldMap"))
-#        
-#      )
-#    )
 
 source("./app_server.R")
 deeanas_page <- tabPanel(
