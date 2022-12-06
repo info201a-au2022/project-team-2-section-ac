@@ -407,4 +407,4 @@ report_page <- tabPanel(
 
 ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, deeanas_page, report_page, summary_page)
 
-ui <- navbarPage("AC-2 Project", introduction_page, shiras_page, nathans_page, deeanas_page, report_page, summary_page)
+
